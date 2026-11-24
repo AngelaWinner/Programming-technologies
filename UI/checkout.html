@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформление и оплата заказа — CraftMarket</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div>
+      <a href="index.html" class="logo">CraftMarket | Ярмарка Хенд-Майд</a>
+      <span class="annotation">Возврат на главную страницу (ВитринаМагазина)</span>
+    </div>
+    <nav class="main-nav" aria-label="Навигация покупателя">
+      <a href="index.html" class="nav-link">Витрина</a>
+      <a href="cart.html" class="nav-link">Корзина (2)</a>
+      <a href="orders.html" class="nav-link">Мои заказы</a>
+      <a href="auth.html" class="btn btn-sm">Войти / Регистрация</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-title-block">
+      <h1 class="page-title">Оформление и оплата заказа</h1>
+      <span class="annotation">Экран «ФормаОформленияИОплаты»: ввод адреса, выбор доставки и онлайн-оплата</span>
+    </div>
+
+    <div class="form-box">
+      <div class="alert-box alert-warning">
+        <strong>Товары зарезервированы на 14:52</strong>
+        <span class="annotation">Таймер обратного отсчета (15 минут). Если оплата не пройдет вовремя, резерв снимается и открывается «ФормаОшибки»</span>
+      </div>
+
+      <form action="orders.html">
+        <div class="form-field">
+          <label for="delivery-type">Способ доставки</label>
+          <select id="delivery-type">
+            <option value="courier">Курьерская доставка по городу (10.00 BYN)</option>
+            <option value="post">Почтовое отправление (7.00 BYN)</option>
+          </select>
+          <span class="annotation">Выбор службы доставки; при выборе курьера заказ попадёт в «КабинетКурьера»</span>
+        </div>
+
+        <div class="form-field">
+          <label for="delivery-city">Город доставки</label>
+          <input type="text" id="delivery-city" value="Минск">
+          <span class="annotation">Используется для фильтрации заказов в кабинете курьера</span>
+        </div>
+
+        <div class="form-field">
+          <label for="delivery-address">Точный адрес (улица, дом, квартира)</label>
+          <input type="text" id="delivery-address" placeholder="пр-т Независимости, д. 58, кв. 12">
+          <span class="annotation">Адрес назначения для курьера или почтовой накладной</span>
+        </div>
+
+        <hr class="divider">
+
+        <h3 class="sub-heading">Данные банковской карты (Итого: 115.00 BYN)</h3>
+
+        <div class="form-field">
+          <label for="card-num">Номер карты</label>
+          <input type="text" id="card-num" placeholder="0000 0000 0000 0000">
+          <span class="annotation">Реквизиты для списания средств через банковский шлюз</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field form-col">
+            <label for="card-exp">Срок действия</label>
+            <input type="text" id="card-exp" placeholder="12/28">
+          </div>
+          <div class="form-field form-col">
+            <label for="card-cvv">CVC / CVV</label>
+            <input type="password" id="card-cvv" placeholder="•••">
+          </div>
+        </div>
+
+        <div class="btn-group-col mt-sm">
+          <a href="orders.html" class="btn">Оплатить заказ (115.00 BYN)</a>
+          <span class="annotation">Отправляет запрос в банк; при успехе фиксирует заказ и переводит в «Мои заказы»</span>
+
+          <a href="error.html" class="btn btn-danger btn-sm">Симулировать ошибку оплаты / истечение таймера</a>
+          <span class="annotation">Демонстрация перехода на «ФормаОшибки» при отказе банка или таймауте 15 мин</span>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>АИС «Онлайн ярмарка товаров хенд-майд»</strong>
+      <span class="annotation">Нижняя информационная часть (footer)</span>
+    </div>
+    <div>
+      <a href="error.html">Демонстрация экрана ошибки</a>
+    </div>
+  </footer>
+
+</body>
+</html>

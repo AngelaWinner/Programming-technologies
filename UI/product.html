@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Керамическая кружка «Лесной мох» — CraftMarket</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div>
+      <a href="index.html" class="logo">CraftMarket | Ярмарка Хенд-Майд</a>
+      <span class="annotation">Возврат на главную страницу (ВитринаМагазина)</span>
+    </div>
+    <nav class="main-nav" aria-label="Навигация покупателя">
+      <a href="index.html" class="nav-link">Витрина</a>
+      <a href="cart.html" class="nav-link">Корзина (2)</a>
+      <a href="orders.html" class="nav-link">Мои заказы</a>
+      <a href="auth.html" class="btn btn-sm">Войти / Регистрация</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="back-bar">
+      <a href="index.html" class="btn btn-outline btn-sm">← Назад в каталог</a>
+      <span class="annotation">Возвращает пользователя на экран «ВитринаМагазина»</span>
+    </div>
+
+    <article class="form-box form-box-wide mb-lg">
+      <div class="two-col-grid">
+        <div>
+          <div class="product-img-placeholder product-img-large">[Детальное фото: Керамическая кружка «Лесной мох»]</div>
+          <span class="annotation">Изображение изделия, загруженное продавцом</span>
+        </div>
+
+        <div>
+          <h1 class="page-title">Керамическая кружка «Лесной мох»</h1>
+          <p class="product-seller">Продавец: <strong>Мастерская «Глина и Огонь»</strong> | Рейтинг: ★ 4.9 (12 отзывов)</p>
+          <p class="product-desc mt-sm">
+            Авторская кружка ручной лепки. Прошла два высокотемпературных обжига (1220 °C). 
+            Покрыта пищевой бессвинцовой глазурью. Подходит для посудомоечной машины. Объем: 350 мл.
+          </p>
+          <p class="product-seller">В наличии: 4 шт.</p>
+          <div class="product-price product-price-large">45.00 BYN</div>
+
+          <a href="cart.html" class="btn">Добавить в корзину и перейти к заказу</a>
+          <span class="annotation">Добавляет товар в корзину и открывает «ЭкранКорзины»</span>
+        </div>
+      </div>
+    </article>
+
+    <section class="form-box form-box-wide">
+      <h2>Отзывы покупателей</h2>
+      <span class="annotation annotation-spaced">Список оставленных оценок и комментариев к товару</span>
+
+      <div class="list-item">
+        <div>
+          <strong>Ольга К.</strong> — Оценка: ★ 5 / 5
+          <p class="mt-sm">Очень уютная кружка, приятно держать в руках, цвет вживую ещё красивее!</p>
+        </div>
+      </div>
+
+      <h3 class="section-heading">Оставить новый отзыв</h3>
+      <form action="product.html">
+        <div class="form-field">
+          <label for="review-rating">Ваша оценка (от 1 до 5)</label>
+          <select id="review-rating">
+            <option value="5">5 — Отлично</option>
+            <option value="4">4 — Хорошо</option>
+            <option value="3">3 — Нормально</option>
+            <option value="2">2 — Плохо</option>
+            <option value="1">1 — Ужасно</option>
+          </select>
+          <span class="annotation">Числовая оценка, влияющая на общий рейтинг товара и мастера</span>
+        </div>
+
+        <div class="form-field">
+          <label for="review-text">Текст комментария</label>
+          <textarea id="review-text" rows="3" placeholder="Поделитесь впечатлениями о качестве изделия..."></textarea>
+          <span class="annotation">Текстовое поле для отзыва (доступно покупателям после получения заказа)</span>
+        </div>
+
+        <button type="button" class="btn">Опубликовать отзыв</button>
+        <span class="annotation">Сохраняет отзыв в системе и обновляет средний рейтинг товара</span>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>АИС «Онлайн ярмарка товаров хенд-майд»</strong>
+      <span class="annotation">Нижняя информационная часть (footer)</span>
+    </div>
+    <div>
+      <a href="error.html">Демонстрация экрана ошибки</a>
+    </div>
+  </footer>
+
+</body>
+</html>

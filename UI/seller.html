@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кабинет продавца — CraftMarket</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div>
+      <a href="index.html" class="logo">CraftMarket | Ярмарка Хенд-Майд</a>
+      <span class="annotation">Логотип: переход на публичную витрину магазина</span>
+    </div>
+    <nav class="main-nav" aria-label="Навигация продавца">
+      <span class="role-badge">Роль: Продавец (Мастерская «Глина и Огонь»)</span>
+      <a href="auth.html" class="btn btn-outline btn-sm">Выйти / Сменить роль</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-title-block">
+      <h1 class="page-title">Кабинет продавца: управление товарами и заказами</h1>
+      <span class="annotation">Экран «КабинетПродавца»: добавление, редактирование, удаление товаров и сборка оплаченных заказов</span>
+    </div>
+
+    <!-- Блок 1: Входящие заказы на сборку -->
+    <section class="form-box form-box-wide mb-lg">
+      <h2>Входящие оплаченные заказы (ожидают сборки)</h2>
+      <span class="annotation annotation-spaced">Заказы покупателей, содержащие изделия данного мастера</span>
+
+      <article class="list-item list-item-active">
+        <div>
+          <h3 class="product-title">Заказ #1048 — Керамическая кружка «Лесной мох» (1 шт.)</h3>
+          <p class="product-seller">Способ доставки: Курьер по г. Минск | Сумма позиции: <strong>45.00 BYN</strong></p>
+          <span class="status-badge status-pending">Статус: Оплачен, ожидает упаковки</span>
+        </div>
+        <div>
+          <button type="button" class="btn btn-sm">Передать в доставку</button>
+          <span class="annotation">Меняет статус заказа на «Готов к выдаче» и открывает его в «КабинетКурьера»</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Блок 2: Форма добавления / редактирования товара -->
+    <section class="form-box form-box-wide mb-lg">
+      <h2>Добавить или отредактировать карточку товара</h2>
+      <span class="annotation annotation-spaced">Форма создания новой позиции каталога или изменения параметров существующей</span>
+
+      <form action="seller.html">
+        <div class="form-field">
+          <label for="prod-name">Название изделия</label>
+          <input type="text" id="prod-name" placeholder="Например: Керамическая тарелка «Лист папоротника»">
+          <span class="annotation">Отображается в заголовке карточки на витрине</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field form-col">
+            <label for="prod-price">Цена (BYN)</label>
+            <input type="number" id="prod-price" placeholder="50.00">
+            <span class="annotation">Стоимость одной единицы товара</span>
+          </div>
+
+          <div class="form-field form-col">
+            <label for="prod-stock">Количество в наличии (шт.)</label>
+            <input type="number" id="prod-stock" placeholder="5">
+            <span class="annotation">Остаток товара, доступный для резервирования</span>
+          </div>
+
+          <div class="form-field form-col">
+            <label for="prod-photo">Фотография изделия</label>
+            <input type="text" id="prod-photo" placeholder="Выберите файл или вставьте ссылку...">
+            <span class="annotation">Загрузка изображения для карточки товара</span>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="prod-desc">Подробное описание и материалы</label>
+          <textarea id="prod-desc" rows="3" placeholder="Опишите технику изготовления, размеры, состав и рекомендации по уходу..."></textarea>
+          <span class="annotation">Выводится на странице детального просмотра товара</span>
+        </div>
+
+        <div class="btn-group-row">
+          <button type="button" class="btn">Сохранить товар</button>
+          <button type="reset" class="btn btn-outline">Очистить форму</button>
+        </div>
+        <span class="annotation">Сохраняет данные в БД и публикует карточку на «ВитринаМагазина»</span>
+      </form>
+    </section>
+
+    <!-- Блок 3: Список текущих товаров продавца -->
+    <section class="form-box form-box-wide">
+      <h2>Мои опубликованные товары</h2>
+      <span class="annotation annotation-spaced">Список позиций мастера с возможностью быстрого редактирования или удаления</span>
+
+      <article class="list-item">
+        <div>
+          <h3 class="product-title">Керамическая кружка «Лесной мох»</h3>
+          <p class="product-seller">Цена: <strong>45.00 BYN</strong> | В наличии: <strong>4 шт.</strong> | Статус: Активен</p>
+        </div>
+        <div class="btn-group-row">
+          <button type="button" class="btn btn-outline btn-sm">Редактировать</button>
+          <button type="button" class="btn btn-danger btn-sm">Удалить</button>
+        </div>
+      </article>
+
+      <article class="list-item">
+        <div>
+          <h3 class="product-title">Пиала «Утренний туман»</h3>
+          <p class="product-seller">Цена: <strong>38.00 BYN</strong> | В наличии: <strong>2 шт.</strong> | Статус: Активен</p>
+        </div>
+        <div class="btn-group-row">
+          <button type="button" class="btn btn-outline btn-sm">Редактировать</button>
+          <button type="button" class="btn btn-danger btn-sm">Удалить</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>АИС «Онлайн ярмарка товаров хенд-майд»</strong>
+      <span class="annotation">Нижняя информационная часть (footer)</span>
+    </div>
+    <div>
+      <a href="error.html">Демонстрация экрана ошибки</a>
+    </div>
+  </footer>
+
+</body>
+</html>

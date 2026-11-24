@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мои заказы — CraftMarket</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div>
+      <a href="index.html" class="logo">CraftMarket | Ярмарка Хенд-Майд</a>
+      <span class="annotation">Возврат на главную страницу (ВитринаМагазина)</span>
+    </div>
+    <nav class="main-nav" aria-label="Навигация покупателя">
+      <a href="index.html" class="nav-link">Витрина</a>
+      <a href="cart.html" class="nav-link">Корзина (2)</a>
+      <a href="orders.html" class="nav-link active">Мои заказы</a>
+      <a href="auth.html" class="btn btn-sm">Войти / Регистрация</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-title-block">
+      <h1 class="page-title">История и статусы моих заказов</h1>
+      <span class="annotation">Экран отслеживания заказов покупателя: просмотр статуса доставки и переход к оценке полученных изделий</span>
+    </div>
+
+    <!-- Активный заказ -->
+    <article class="list-item list-item-active">
+      <div>
+        <h2 class="product-title">Заказ #1048 от 20.11.2026</h2>
+        <p class="product-seller">Состав: Керамическая кружка «Лесной мох» (1 шт.), Льняной шоппер (1 шт.)</p>
+        <p class="product-desc">Доставка: Курьерская служба по г. Минск | Сумма: <strong>115.00 BYN</strong></p>
+        <span class="status-badge status-pending">Статус: Передан курьеру (в пути)</span>
+        <span class="annotation">Статус обновляется автоматически после действий продавца и курьера</span>
+      </div>
+
+      <div>
+        <a href="product.html" class="btn btn-outline btn-sm">Посмотреть товары</a>
+        <span class="annotation">Кнопка отзыва станет активной после перевода заказа в статус «Доставлен»</span>
+      </div>
+    </article>
+
+    <!-- Завершённый заказ -->
+    <article class="list-item">
+      <div>
+        <h2 class="product-title">Заказ #1012 от 05.11.2026</h2>
+        <p class="product-seller">Состав: Кожаный картхолдер «Орех» (1 шт.)</p>
+        <p class="product-desc">Доставка: Почтовое отправление | Сумма: <strong>62.00 BYN</strong></p>
+        <span class="status-badge">Статус: Доставлен покупателю</span>
+        <span class="annotation">Заказ завершён; покупателю разрешено оставить отзыв о качестве изделия</span>
+      </div>
+
+      <div>
+        <a href="product.html" class="btn btn-sm">Оставить отзыв (★ 1–5)</a>
+        <span class="annotation">Открывает карточку товара с формой публикации оценки и комментария</span>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>АИС «Онлайн ярмарка товаров хенд-майд»</strong>
+      <span class="annotation">Нижняя информационная часть (footer)</span>
+    </div>
+    <div>
+      <a href="error.html">Демонстрация экрана ошибки</a>
+    </div>
+  </footer>
+
+</body>
+</html>

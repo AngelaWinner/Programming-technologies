@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ярмарка Хенд-Майд — Витрина магазина</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div>
+      <a href="index.html" class="logo">CraftMarket | Ярмарка Хенд-Майд</a>
+      <span class="annotation">Логотип: при нажатии возвращает на главную страницу (ВитринаМагазина)</span>
+    </div>
+
+    <nav class="main-nav" aria-label="Навигация покупателя">
+      <a href="index.html" class="nav-link active">Витрина</a>
+      <a href="cart.html" class="nav-link">Корзина (2)</a>
+      <a href="orders.html" class="nav-link">Мои заказы</a>
+      <a href="auth.html" class="btn btn-sm">Войти / Регистрация</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-title-block">
+      <h1 class="page-title">Витрина авторских изделий ручной работы</h1>
+      <span class="annotation">Экран «ВитринаМагазина»: доступен всем посетителям; вход в кабинеты сотрудников выполняется через «Войти / Регистрация»</span>
+    </div>
+
+    <section class="controls-panel" aria-label="Поиск и фильтрация товаров">
+      <div class="control-group">
+        <label for="search-input">Поиск по названию</label>
+        <input type="text" id="search-input" placeholder="Например: керамическая кружка...">
+        <span class="annotation">Фильтрует каталог по вхождению подстроки в название товара</span>
+      </div>
+
+      <div class="control-group">
+        <label for="seller-filter">Мастер / Продавец</label>
+        <select id="seller-filter">
+          <option value="all">Все мастера</option>
+          <option value="1">Мастерская «Глина и Огонь»</option>
+          <option value="2">Ателье «Льняной край»</option>
+          <option value="3">Кожевенная «Старый дуб»</option>
+        </select>
+        <span class="annotation">Отбирает товары конкретного продавца</span>
+      </div>
+
+      <div class="control-group">
+        <label for="price-max">Цена до (BYN)</label>
+        <input type="number" id="price-max" placeholder="150">
+        <span class="annotation">Ограничивает выборку максимальной стоимостью</span>
+      </div>
+
+      <div class="control-group">
+        <label for="sort-select">Сортировка</label>
+        <select id="sort-select">
+          <option value="popular">По популярности</option>
+          <option value="price-asc">Сначала дешевле</option>
+          <option value="price-desc">Сначала дороже</option>
+          <option value="rating">По рейтингу отзывов</option>
+        </select>
+        <span class="annotation">Перестраивает порядок карточек в сетке</span>
+      </div>
+
+      <div>
+        <button type="button" class="btn">Применить</button>
+        <span class="annotation">Запускает запрос фильтрации к каталогу</span>
+      </div>
+    </section>
+
+    <section class="products-grid" aria-label="Каталог товаров">
+      <article class="card">
+        <div>
+          <div class="product-img-placeholder">[Фото: Керамическая кружка «Лесной мох»]</div>
+          <h2 class="product-title">Керамическая кружка «Лесной мох»</h2>
+          <p class="product-seller">Мастер: Глина и Огонь (★ 4.9)</p>
+          <p class="product-desc">Ручная лепка из шамотной глины, глазурь с эффектом натурального камня, 350 мл.</p>
+        </div>
+        <div>
+          <div class="product-price">45.00 BYN</div>
+          <div class="btn-group-col">
+            <a href="cart.html" class="btn">Добавить в корзину</a>
+            <span class="annotation">Переводит на «ЭкранКорзины» и добавляет 1 ед. товара</span>
+            <a href="product.html" class="btn btn-outline btn-sm">Подробнее и отзывы</a>
+            <span class="annotation">Открывает экран просмотра товара и форму добавления отзыва</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div>
+          <div class="product-img-placeholder">[Фото: Льняной шоппер с вышивкой]</div>
+          <h2 class="product-title">Льняной шоппер с вышивкой</h2>
+          <p class="product-seller">Мастер: Ателье «Льняной край» (★ 5.0)</p>
+          <p class="product-desc">100% белорусский умягченный лён, ручная вышивка полевых цветов гладью.</p>
+        </div>
+        <div>
+          <div class="product-price">60.00 BYN</div>
+          <div class="btn-group-col">
+            <a href="cart.html" class="btn">Добавить в корзину</a>
+            <span class="annotation">Переводит на «ЭкранКорзины» и добавляет 1 ед. товара</span>
+            <a href="product.html" class="btn btn-outline btn-sm">Подробнее и отзывы</a>
+            <span class="annotation">Открывает экран просмотра товара и форму добавления отзыва</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div>
+          <div class="product-img-placeholder">[Фото: Кожаный картхолдер ручной прошивки]</div>
+          <h2 class="product-title">Кожаный картхолдер «Орех»</h2>
+          <p class="product-seller">Мастер: Кожевенная «Старый дуб» (★ 4.8)</p>
+          <p class="product-desc">Натуральная кожа растительного дубления, седельный шов вощеной нитью.</p>
+        </div>
+        <div>
+          <div class="product-price">55.00 BYN</div>
+          <div class="btn-group-col">
+            <a href="cart.html" class="btn">Добавить в корзину</a>
+            <span class="annotation">Переводит на «ЭкранКорзины» и добавляет 1 ед. товара</span>
+            <a href="product.html" class="btn btn-outline btn-sm">Подробнее и отзывы</a>
+            <span class="annotation">Открывает экран просмотра товара и форму добавления отзыва</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div>
+          <div class="product-img-placeholder">[Фото: Соевая ароматическая свеча]</div>
+          <h2 class="product-title">Свеча в кокосовой скорлупе</h2>
+          <p class="product-seller">Мастер: Тепло Дома (★ 4.7)</p>
+          <p class="product-desc">Натуральный соевый воск, деревянный фитиль с легким треском, аромат кедра и ванили.</p>
+        </div>
+        <div>
+          <div class="product-price">32.00 BYN</div>
+          <div class="btn-group-col">
+            <a href="cart.html" class="btn">Добавить в корзину</a>
+            <span class="annotation">Переводит на «ЭкранКорзины» и добавляет 1 ед. товара</span>
+            <a href="product.html" class="btn btn-outline btn-sm">Подробнее и отзывы</a>
+            <span class="annotation">Открывает экран просмотра товара и форму добавления отзыва</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="pagination-block" aria-label="Пагинация каталога">
+      <button type="button" class="btn btn-outline">Загрузить ещё товары</button>
+      <span class="annotation">Подгружает следующую порцию из 12 товаров без перезагрузки страницы</span>
+
+      <div class="pagination-numbers">
+        <a href="index.html" class="btn btn-sm">1</a>
+        <a href="index.html" class="btn btn-outline btn-sm">2</a>
+        <a href="index.html" class="btn btn-outline btn-sm">3</a>
+        <a href="index.html" class="btn btn-outline btn-sm">Далее →</a>
+      </div>
+      <span class="annotation">Постраничная навигация по каталогу товаров</span>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>АИС «Онлайн ярмарка товаров хенд-майд»</strong>
+      <span class="annotation">Нижняя информационная часть (footer), единая для всех экранов</span>
+    </div>
+    <div>
+      <a href="error.html">Демонстрация экрана ошибки (для проверки)</a>
+      <span class="annotation">Скрытая ссылка для перехода на экран «ФормаОшибки»</span>
+    </div>
+  </footer>
+
+</body>
+</html>

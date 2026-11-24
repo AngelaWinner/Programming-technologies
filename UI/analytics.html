@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Панель аналитики руководителя — CraftMarket</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div>
+      <a href="index.html" class="logo">CraftMarket | Ярмарка Хенд-Майд</a>
+      <span class="annotation">Логотип: переход на публичную витрину магазина</span>
+    </div>
+    <nav class="main-nav" aria-label="Навигация руководителя">
+      <span class="role-badge">Роль: Руководитель платформы</span>
+      <a href="auth.html" class="btn btn-outline btn-sm">Выйти / Сменить роль</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-title-block">
+      <h1 class="page-title">Панель аналитики и отчётности</h1>
+      <span class="annotation">Экран «ПанельАналитики»: формирование сводных отчетов для руководителя платформы</span>
+    </div>
+
+    <section class="controls-panel" aria-label="Параметры отчета">
+      <div class="control-group">
+        <label for="report-type">Тип аналитического отчёта</label>
+        <select id="report-type">
+          <option value="sales">Выручка и продажи по мастерам</option>
+          <option value="popular">Рейтинг самых популярных товаров</option>
+        </select>
+        <span class="annotation">Определяет структуру и группировку данных в таблице ниже</span>
+      </div>
+
+      <div class="control-group">
+        <label for="date-from">Период с</label>
+        <input type="date" id="date-from" value="2026-11-01">
+        <span class="annotation">Начальная дата выборки</span>
+      </div>
+
+      <div class="control-group">
+        <label for="date-to">Период по</label>
+        <input type="date" id="date-to" value="2026-11-20">
+        <span class="annotation">Конечная дата выборки</span>
+      </div>
+
+      <div>
+        <button type="button" class="btn">Сформировать отчёт</button>
+        <span class="annotation">Выполняет агрегацию заказов за выбранный период</span>
+      </div>
+    </section>
+
+    <section class="form-box form-box-wide">
+      <div class="summary-bar mb-md">
+        <div>
+          <h2>Сводный отчёт по продажам мастеров (01.11.2026 — 20.11.2026)</h2>
+          <span class="annotation">Табличное представление агрегированных показателей системы</span>
+        </div>
+        <div>
+          <button type="button" class="btn btn-outline btn-sm">Экспорт в CSV / Печать</button>
+          <span class="annotation">Выгружает сформированный отчёт для бухгалтерии</span>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Мастер / Мастерская</th>
+              <th>Выполнено заказов</th>
+              <th>Продано изделий</th>
+              <th>Средний рейтинг</th>
+              <th>Общая выручка (BYN)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Мастерская «Глина и Огонь»</td>
+              <td>34</td>
+              <td>49 шт.</td>
+              <td>★ 4.9</td>
+              <td><strong>2 140.00 BYN</strong></td>
+            </tr>
+            <tr>
+              <td>Ателье «Льняной край»</td>
+              <td>28</td>
+              <td>31 шт.</td>
+              <td>★ 5.0</td>
+              <td><strong>1 860.00 BYN</strong></td>
+            </tr>
+            <tr>
+              <td>Кожевенная «Старый дуб»</td>
+              <td>19</td>
+              <td>22 шт.</td>
+              <td>★ 4.8</td>
+              <td><strong>1 210.00 BYN</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>АИС «Онлайн ярмарка товаров хенд-майд»</strong>
+      <span class="annotation">Нижняя информационная часть (footer)</span>
+    </div>
+    <div>
+      <a href="error.html">Демонстрация экрана ошибки</a>
+    </div>
+  </footer>
+
+</body>
+</html>
